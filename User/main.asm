@@ -169,65 +169,29 @@ Init    		PROC
 				; Включаем пин 9 порта GPIOC как выход
 				LDR 	r0, =(GPIOC_MODER)							; Записываем в R0 адрес регистра GPIOC + смещение 0
 				LDR 	r1, =(1 << (9*2))							; Каждый пин имеет два бита параметров, поэтому умножаем на 2 
-				STR 	r1, [r0]     								; Записываем по адресу [R0] значение из R1				
-	
-				B		BlinkLoopOn
-			
-				; Конец программы
-				ENDP
-				
+				STR 	r1, [r0]     								; Записываем по адресу [R0] значение из R1			
 
-BlinkLoopOn		PROC
-	
-				; Записываем высокий уровень в пин PC9
+BlinkLoopOn		; Записываем высокий уровень в пин PC9
 				LDR 	r0, =(GPIOC_ODR)
 				LDR 	r1, =(1 << 9)
 				STR 	r1, [r0]     					; Записываем по адресу [R0] значение из R1
 	
-	
-				LDR 	r0, =(800000)				
-				B		DelayOn		
-				
-				; Конец программы
-				ENDP 		
+				LDR 	r0, =(800000)
+DelayOn								
+				SUBS R0, R0, #1							; Вычитаем единицу				
+				BNE DelayOn								; Пока не обнулилась, крутим дальше
 						
-BlinkLoopOff	PROC
-	
-				; Записываем низкий уровень в пин PC9
+BlinkLoopOff	; Записываем низкий уровень в пин PC9
 				LDR 	r0, =(GPIOC_ODR)
 				LDR 	r1, =(0)
 				STR 	r1, [r0] 						; Записываем по адресу [R0] значение из R1	
 				
-				LDR 	r0, =(800000)				
-				B		DelayOff
-				
-				; Конец программы
-				ENDP			
-
-
-DelayOn 		PROC
-				
-				; Вычитаем единицу
-				SUBS R0, R0, #1
-				
-				; Пока не обнулилась, крутим дальше
-				BNE DelayOn
+				LDR 	r0, =(800000)
+DelayOff								
+				SUBS R0, R0, #1							; Вычитаем единицу				
+				BNE DelayOff								; Пока не обнулилась, крутим дальше
           
-				B BlinkLoopOff
-				
-				; Конец программы
-				ENDP
-					
-					
-DelayOff 		PROC
-				
-				; Вычитаем единицу
-				SUBS R0, R0, #1
-				
-				; Пока не обнулилась, крутим дальше
-				BNE DelayOff
-          
-				B BlinkLoopOn
+				B BlinkLoopOn			
 				
 				; Конец программы
 				ENDP

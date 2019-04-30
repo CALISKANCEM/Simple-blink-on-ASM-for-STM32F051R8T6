@@ -6,51 +6,51 @@ PERIPH_BASE           		EQU     (0x40000000)
 APBPERIPH_BASE      		EQU     (PERIPH_BASE)
 AHBPERIPH_BASE        		EQU     (PERIPH_BASE + 0x00020000)
 AHB2PERIPH_BASE				EQU     (PERIPH_BASE + 0x08000000)
-
 ADC_BASE           			EQU     (APBPERIPH_BASE + 0x00012708)
 ADC1_BASE           		EQU     (APBPERIPH_BASE + 0x00012400)
-DMA1_BASE             		EQU     (AHBPERIPH_BASE + 0x00000000)
+CEC_BASE              		EQU     (APBPERIPH_BASE + 0x00007800)
+COMP_BASE             		EQU     (APBPERIPH_BASE + 0x0001001C)
+CRC_BASE              		EQU     (AHBPERIPH_BASE + 0x00003000)	
+DAC_BASE              		EQU     (APBPERIPH_BASE + 0x00007400)
+DBGMCU_BASE           		EQU     (APBPERIPH_BASE + 0x00015800)
+DMA1_BASE             		EQU     (AHBPERIPH_BASE + 0x00000000)	
 DMA1_Channel1_BASE    		EQU     (DMA1_BASE + 0x00000008)
 DMA1_Channel2_BASE    		EQU     (DMA1_BASE + 0x0000001C)
 DMA1_Channel3_BASE    		EQU     (DMA1_BASE + 0x00000030)
 DMA1_Channel4_BASE    		EQU     (DMA1_BASE + 0x00000044)
-DMA1_Channel5_BASE    		EQU     (DMA1_BASE + 0x00000058)	
-TIM2_BASE             		EQU     (APBPERIPH_BASE + 0x00000000)
-TIM3_BASE             		EQU     (APBPERIPH_BASE + 0x00000400)
-TIM6_BASE             		EQU     (APBPERIPH_BASE + 0x00001000)
-TIM14_BASE            		EQU     (APBPERIPH_BASE + 0x00002000)
-RTC_BASE              		EQU     (APBPERIPH_BASE + 0x00002800)
-WWDG_BASE             		EQU     (APBPERIPH_BASE + 0x00002C00)
-IWDG_BASE             		EQU     (APBPERIPH_BASE + 0x00003000)
-SPI2_BASE             		EQU     (APBPERIPH_BASE + 0x00003800)
-USART2_BASE           		EQU     (APBPERIPH_BASE + 0x00004400)
-I2C1_BASE             		EQU     (APBPERIPH_BASE + 0x00005400)
-I2C2_BASE             		EQU     (APBPERIPH_BASE + 0x00005800)
-PWR_BASE              		EQU     (APBPERIPH_BASE + 0x00007000)
-DAC_BASE              		EQU     (APBPERIPH_BASE + 0x00007400)
-CEC_BASE              		EQU     (APBPERIPH_BASE + 0x00007800)
-SYSCFG_BASE           		EQU     (APBPERIPH_BASE + 0x00010000)
-COMP_BASE             		EQU     (APBPERIPH_BASE + 0x0001001C)
-EXTI_BASE             		EQU     (APBPERIPH_BASE + 0x00010400)	
-TIM1_BASE             		EQU     (APBPERIPH_BASE + 0x00012C00)
-SPI1_BASE             		EQU     (APBPERIPH_BASE + 0x00013000)
-USART1_BASE           		EQU     (APBPERIPH_BASE + 0x00013800)
-TIM15_BASE            		EQU     (APBPERIPH_BASE + 0x00014000)
-TIM16_BASE            		EQU     (APBPERIPH_BASE + 0x00014400)
-TIM17_BASE            		EQU     (APBPERIPH_BASE + 0x00014800)
-DBGMCU_BASE           		EQU     (APBPERIPH_BASE + 0x00015800)	
-RCC_BASE              		EQU     (AHBPERIPH_BASE + 0x00001000)
-FLASH_R_BASE          		EQU     (AHBPERIPH_BASE + 0x00002000) 			; FLASH registers base address */
+DMA1_Channel5_BASE    		EQU     (DMA1_BASE + 0x00000058)
+EXTI_BASE             		EQU     (APBPERIPH_BASE + 0x00010400)
+FLASH_R_BASE          		EQU     (AHBPERIPH_BASE + 0x00002000) 			; FLASH registers base address */	
 OB_BASE               		EQU     (0x1FFFF800)       						; FLASH Option Bytes base address */
 FLASHSIZE_BASE        		EQU     (0x1FFFF7CC)       						; FLASH Size register base address */
-UID_BASE              		EQU     (0x1FFFF7AC)       						; Unique device ID register base address */
-CRC_BASE              		EQU     (AHBPERIPH_BASE + 0x00003000)
-TSC_BASE              		EQU     (AHBPERIPH_BASE + 0x00004000)	
 GPIOA_BASE            		EQU     (AHB2PERIPH_BASE + 0x00000000)
 GPIOB_BASE            		EQU     (AHB2PERIPH_BASE + 0x00000400)
 GPIOC_BASE            		EQU     (AHB2PERIPH_BASE + 0x00000800)
 GPIOD_BASE            		EQU     (AHB2PERIPH_BASE + 0x00000C00)
-GPIOF_BASE            		EQU     (AHB2PERIPH_BASE + 0x00001400)	
+GPIOF_BASE            		EQU     (AHB2PERIPH_BASE + 0x00001400)
+I2C1_BASE             		EQU     (APBPERIPH_BASE + 0x00005400)
+I2C2_BASE             		EQU     (APBPERIPH_BASE + 0x00005800)	
+IWDG_BASE             		EQU     (APBPERIPH_BASE + 0x00003000)
+PWR_BASE              		EQU     (APBPERIPH_BASE + 0x00007000)
+RCC_BASE              		EQU     (AHBPERIPH_BASE + 0x00001000)
+RTC_BASE              		EQU     (APBPERIPH_BASE + 0x00002800)
+SPI1_BASE             		EQU     (APBPERIPH_BASE + 0x00013000)
+SPI2_BASE             		EQU     (APBPERIPH_BASE + 0x00003800)
+SYSCFG_BASE           		EQU     (APBPERIPH_BASE + 0x00010000)
+TIM1_BASE             		EQU     (APBPERIPH_BASE + 0x00012C00)
+TIM2_BASE             		EQU     (APBPERIPH_BASE + 0x00000000)
+TIM3_BASE             		EQU     (APBPERIPH_BASE + 0x00000400)
+TIM6_BASE             		EQU     (APBPERIPH_BASE + 0x00001000)
+TIM14_BASE            		EQU     (APBPERIPH_BASE + 0x00002000)
+TIM15_BASE            		EQU     (APBPERIPH_BASE + 0x00014000)
+TIM16_BASE            		EQU     (APBPERIPH_BASE + 0x00014400)
+TIM17_BASE            		EQU     (APBPERIPH_BASE + 0x00014800)
+TSC_BASE              		EQU     (AHBPERIPH_BASE + 0x00004000)	
+WWDG_BASE             		EQU     (APBPERIPH_BASE + 0x00002C00)
+UID_BASE              		EQU     (0x1FFFF7AC)       						; Unique device ID register base address */	
+USART1_BASE           		EQU     (APBPERIPH_BASE + 0x00013800)	
+USART2_BASE           		EQU     (APBPERIPH_BASE + 0x00004400)	
+	
 	
 ;
 ;	ADC1
@@ -124,14 +124,19 @@ DMA1_Channel5_CCR			EQU     (DMA1_Channel5_BASE + 0x00000000)	; DMA channel x co
 DMA1_Channel5_CNDTR 		EQU     (DMA1_Channel5_BASE + 0x00000004)   ; DMA channel x number of data register */
 DMA1_Channel5_CPAR  		EQU     (DMA1_Channel5_BASE + 0x00000008)   ; DMA channel x peripheral address register */
 DMA1_Channel5_CMAR  		EQU     (DMA1_Channel5_BASE + 0x0000000C)   ; DMA channel x memory address register */
-												
 										
 
 ; 
 ;	Регистр тактирования RCC
 ;
 RCC_CR						EQU		(RCC_BASE + 0x00000000)
+RCC_CR_HSEON				EQU		(0x00010000)
+RCC_CR_HSERDY				EQU		(0x00020000)
+RCC_CR_PLLON				EQU		(0x01000000)
+RCC_CR_PLLRDY				EQU		(0x02000000)
+	
 RCC_CFGR					EQU		(RCC_BASE + 0x00000004)	
+RCC_CFGR_SWS_PLL			EQU		(0x00000008)
 RCC_CIR						EQU		(RCC_BASE + 0x00000008)	
 RCC_APB2RSTR				EQU		(RCC_BASE + 0x0000000C)	
 RCC_APB1RSTR				EQU		(RCC_BASE + 0x00000010)	
@@ -177,6 +182,7 @@ I2C2_PECR      				EQU		(I2C2_BASE + 0x00000020)			; I2C PEC register */
 I2C2_RXDR      				EQU		(I2C2_BASE + 0x00000024)			; I2C Receive data register */
 I2C2_TXDR      				EQU		(I2C2_BASE + 0x00000028)			; I2C Transmit data register */
 	
+	
 ;
 ;	SPI1
 ;
@@ -210,7 +216,7 @@ SPI2_I2SPR      			EQU		(SPI2_BASE + 0x00000020)						; SPI_I2S prescaler regist
 ;
 GPIOA_MODER					EQU		(GPIOA_BASE	+ 0x00000000)
 GPIOA_OTYPER				EQU		(GPIOA_BASE	+ 0x00000004)
-GPIOA_OSPEEDER				EQU		(GPIOA_BASE	+ 0x00000008)
+GPIOA_OSPEEDR				EQU		(GPIOA_BASE	+ 0x00000008)
 GPIOA_PUPDR					EQU		(GPIOA_BASE	+ 0x0000000C)	
 GPIOA_IDR					EQU		(GPIOA_BASE	+ 0x00000010)
 GPIOA_ODR					EQU		(GPIOA_BASE	+ 0x00000014)
@@ -226,7 +232,7 @@ GPIOA_BRR					EQU		(GPIOA_BASE	+ 0x00000028)
 ;
 GPIOB_MODER					EQU		(GPIOB_BASE	+ 0x00000000)
 GPIOB_OTYPER				EQU		(GPIOB_BASE	+ 0x00000004)
-GPIOB_OSPEEDER				EQU		(GPIOB_BASE	+ 0x00000008)
+GPIOB_OSPEEDR				EQU		(GPIOB_BASE	+ 0x00000008)
 GPIOB_PUPDR					EQU		(GPIOB_BASE	+ 0x0000000C)	
 GPIOB_IDR					EQU		(GPIOB_BASE	+ 0x00000010)
 GPIOB_ODR					EQU		(GPIOB_BASE	+ 0x00000014)
@@ -242,7 +248,7 @@ GPIOB_BRR					EQU		(GPIOB_BASE	+ 0x00000028)
 ;
 GPIOC_MODER					EQU		(GPIOC_BASE	+ 0x00000000)
 GPIOC_OTYPER				EQU		(GPIOC_BASE	+ 0x00000004)
-GPIOC_OSPEEDER				EQU		(GPIOC_BASE	+ 0x00000008)
+GPIOC_OSPEEDR				EQU		(GPIOC_BASE	+ 0x00000008)
 GPIOC_PUPDR					EQU		(GPIOC_BASE	+ 0x0000000C)	
 GPIOC_IDR					EQU		(GPIOC_BASE	+ 0x00000010)
 GPIOC_ODR					EQU		(GPIOC_BASE	+ 0x00000014)
@@ -258,7 +264,7 @@ GPIOC_BRR					EQU		(GPIOC_BASE	+ 0x00000028)
 ;
 GPIOD_MODER					EQU		(GPIOD_BASE	+ 0x00000000)
 GPIOD_OTYPER				EQU		(GPIOD_BASE	+ 0x00000004)
-GPIOD_OSPEEDER				EQU		(GPIOD_BASE	+ 0x00000008)
+GPIOD_OSPEEDR				EQU		(GPIOD_BASE	+ 0x00000008)
 GPIOD_PUPDR					EQU		(GPIOD_BASE	+ 0x0000000C)	
 GPIOD_IDR					EQU		(GPIOD_BASE	+ 0x00000010)
 GPIOD_ODR					EQU		(GPIOD_BASE	+ 0x00000014)
@@ -275,7 +281,7 @@ GPIOD_BRR					EQU		(GPIOD_BASE	+ 0x00000028)
 ;
 GPIOF_MODER					EQU		(GPIOF_BASE	+ 0x00000000)
 GPIOF_OTYPER				EQU		(GPIOF_BASE	+ 0x00000004)
-GPIOF_OSPEEDER				EQU		(GPIOF_BASE	+ 0x00000008)
+GPIOF_OSPEEDR				EQU		(GPIOF_BASE	+ 0x00000008)
 GPIOF_PUPDR					EQU		(GPIOF_BASE	+ 0x0000000C)	
 GPIOF_IDR					EQU		(GPIOF_BASE	+ 0x00000010)
 GPIOF_ODR					EQU		(GPIOF_BASE	+ 0x00000014)
@@ -295,7 +301,8 @@ EXTI_RTSR         			EQU		(EXTI_BASE + 0x00000008)			;EXTI Rising trigger select
 EXTI_FTSR         			EQU		(EXTI_BASE + 0x0000000C)			;EXTI Falling trigger selection register */
 EXTI_SWIER        			EQU		(EXTI_BASE + 0x00000010)			;EXTI Software interrupt event register */
 EXTI_PR           			EQU		(EXTI_BASE + 0x00000014)			;EXTI Pending register */
-												
+		
+		
 ;
 ; 	Регистр TIM1
 ;
@@ -539,16 +546,15 @@ RTC_BKP4R         			EQU		(RTC_BASE + 0x00000060)      		; RTC backup register 4
 ;
 ;	DAC1
 ;
-DAC1_CR            			EQU		(DAC_BASE + 0x00000000)					; DAC control register */
-DAC1_SWTRIGR       			EQU		(DAC_BASE + 0x00000004)					; DAC software trigger register */
-DAC1_DHR12R1       			EQU		(DAC_BASE + 0x00000008)					; DAC channel1 12-bit right-aligned data holding register */
-DAC1_DHR12L1       			EQU		(DAC_BASE + 0x0000000C)					; DAC channel1 12-bit left aligned data holding register */
-DAC1_DHR8R1        			EQU		(DAC_BASE + 0x00000010)					; DAC channel1 8-bit right aligned data holding register */
-DAC1_RESERVED1  			EQU		(DAC_BASE + 0x00000014)					; Reserved */
-DAC1_DOR1          			EQU		(DAC_BASE + 0x0000002C)					; DAC channel1 data output register */
-DAC1_RESERVED2     			EQU		(DAC_BASE + 0x00000030)					; Reserved */
-DAC1_SR            			EQU		(DAC_BASE + 0x00000034)					; DAC status register */
-
+DAC1_CR            			EQU		(DAC_BASE + 0x00000000)				; DAC control register */
+DAC1_SWTRIGR       			EQU		(DAC_BASE + 0x00000004)				; DAC software trigger register */
+DAC1_DHR12R1       			EQU		(DAC_BASE + 0x00000008)				; DAC channel1 12-bit right-aligned data holding register */
+DAC1_DHR12L1       			EQU		(DAC_BASE + 0x0000000C)				; DAC channel1 12-bit left aligned data holding register */
+DAC1_DHR8R1        			EQU		(DAC_BASE + 0x00000010)				; DAC channel1 8-bit right aligned data holding register */
+DAC1_RESERVED1  			EQU		(DAC_BASE + 0x00000014)				; Reserved */
+DAC1_DOR1          			EQU		(DAC_BASE + 0x0000002C)				; DAC channel1 data output register */
+DAC1_RESERVED2     			EQU		(DAC_BASE + 0x00000030)				; Reserved */
+DAC1_SR            			EQU		(DAC_BASE + 0x00000034)				; DAC status register */
 											
 
 ;
@@ -598,7 +604,6 @@ COMP12_COMMON_CSR   		EQU		(COMP_BASE + 0x00000000)			; COMP control and status 
 WWDG_CR						EQU		(WWDG_BASE + 0x00000000)   			; WWDG Control register */
 WWDG_CFR					EQU		(WWDG_BASE + 0x00000004) 			; WWDG Configuration register */
 WWDG_SR						EQU		(WWDG_BASE + 0x00000008)   			; WWDG Status register */
-
 
 											
 ;
