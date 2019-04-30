@@ -7,3 +7,5 @@ Project contain a simple blink code on assembly language (ARM ASM) for STM32F051
 Main: User/main.asm
 
 Peripherial defines: User/stm32f051r8t6.asm
+
+#Assembler #STM32 #keil
